@@ -52,7 +52,7 @@ const Navbar = () => {
         className={
           !nav
             ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-page-bg ease-in-out duration-500"
-            : "fixed left-[-100%]"
+            : "fixed left-[-100%] block md:hidden"
         }
       >
         <h1 className="w-full text-2xl font-semibold m-4"> Nouelle Caparas</h1>
