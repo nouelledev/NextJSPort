@@ -26,8 +26,8 @@ const About = () => {
         </div>
       </div>
       {/* About me section*/}
-      <div className="flex  flex-col md:flex-row items-center pt-[150px] mx-auto px-4 justify-between md:justify-evenly ">
-        <div className="w-fit h-fit shrink-0 md:ml-[20%]">
+      <div className="flex  flex-col md:flex-row items-center pt-[150px] mx-auto justify-between md:justify-evenly ">
+        <div className="w-fit h-fit shrink-0 md:ml-[20%] px-4">
           <Image
             src="/pcpicture.jpg"
             width={400}
@@ -36,14 +36,14 @@ const About = () => {
             className="rounded-lg  object-cover"
           />
         </div>
-        <div className="flex flex-col pt-5 h-fit w-fit  px-4 md:justify-evenly ">
+        <div className="flex flex-col  h-fit w-fit  md:justify-evenly ">
           <div className="text-white items-center ">
             <div className=" md:mx-auto md:w-[50%] md:p-auto md:pb-[50px] place-content-center mx-auto w-[50%] md:p-auto pb-[25px]">
-              <h1 className="font-bold text-base md:text-5xl mx-auto w-[50%] p-auto">
+              <h1 className="font-bold text-base md:text-5xl text-center">
                 About me
               </h1>
             </div>
-            <p className=" text-sm md:text-base font-semibold md:mx-auto md:w-[50%] md:p-auto">
+            <p className=" text-sm md:text-base font-semibold md:mx-auto md:w-[50%] md:p-auto px-4">
               I am Nouelle Caparas, a Front End Web Developer. I am a graduate
               of Bachelor Of Science in Information Technology at STI College
               Malolos and is currently looking for opportunity in the Web
