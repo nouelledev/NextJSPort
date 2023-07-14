@@ -10,6 +10,10 @@ module.exports = {
       colors: {
         "page-bg": "#23263A",
         "card-bd": "#2D3151",
+        "card-contact": "#363B5A",
+      },
+      borderRadius: {
+        "my-size": "2.5rem",
       },
     },
   },

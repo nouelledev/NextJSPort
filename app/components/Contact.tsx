@@ -26,25 +26,23 @@ const Contact = () => {
   async function handleSubmit(e: React.SyntheticEvent) {
     await fetch("/api/email", {
       method: "POST",
-      body: JSON.stringify({
-        firstName: "Nouelle",
-      }),
+      body: JSON.stringify({}),
     });
   }
   return (
     <div
-      className="w-full h-full text-center grid grid-cols-1 px-11 pt-16 md:grid-cols-2"
+      className="md:w-[80%] h-full text-center grid grid-cols-1 px-11 pt-16 md:grid-cols-2 mx-auto gap-x-11"
       id="contact"
     >
       <h1 className="text-base md:text-5xl text-white pb-5 md:col-span-2 md:pb-[5%]">
         Contact me
       </h1>
-      <div className="col-start-1 h-full w-full place-content-center">
+      <div className="col-start-1 h-full w-full place-content-center border-white  border-solid rounded-my-size bg-card-contact">
         <div className="flex flex-col">
-          <h1 className="text-white md:text-5xl md:pb-[5%]">
+          <h1 className="text-white md:text-3xl md:pb-[5%] md:mt-11">
             Contact Informations
           </h1>
-          <p className="text-base md:text-2xl text-white md:pb-[2%] pb-5">
+          <p className="text-base md:text-1xl text-white md:pb-[2%] pb-5">
             Fill up the form and I hope to work with you soon.
           </p>
           <div className="text-white text-base w-full flex flex-row pb-6 justify-center md:gap-x-16 gap-x-3">
@@ -62,30 +60,32 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-[5%] md:w-[75%] md:mx-auto">
+      <div className=" mt-[5%] md:w-full md:mx-auto">
         <form className=" md:col-start-2 " onSubmit={handleSubmit}>
-          <input
-            type="text"
-            {...register("firstName")}
-            placeholder="Enter your name"
-            className=" bg-inherit w-full border-b-2 border-b-slate-600 text-white text-base outline-none md:text-1xl"
-          />
-          <input
-            type="text"
-            {...register("email")}
-            placeholder="Enter a valid email address"
-            className=" bg-inherit w-full border-b-2 border-b-slate-600 text-white text-base outline-none md:text-1xl"
-          />
-          <textarea
-            rows={4}
-            {...register("message")}
-            placeholder="Message"
-            className=" bg-inherit w-full border-b-2 border-b-slate-600 text-white text-base resize-none outline-none md:text-1xl"
-          />
-          <input
-            className="text-white w-[50%] md:text-2xl md:w-[35%] h-[35px]  bg-slate-600 rounded-lg"
-            type="submit"
-          />
+          <div className="md:grid md:grid-cols-2 md:gap-8">
+            <input
+              type="text"
+              {...register("firstName")}
+              placeholder="Enter your name"
+              className=" bg-inherit w-full border-b-2 border-b-slate-600 text-white text-base outline-none md:text-1xl"
+            />
+            <input
+              type="text"
+              {...register("email")}
+              placeholder="Enter a valid email address"
+              className=" bg-inherit w-full border-b-2 border-b-slate-600 text-white text-base outline-none md:text-1xl"
+            />
+            <textarea
+              rows={4}
+              {...register("message")}
+              placeholder="Message"
+              className=" bg-inherit w-full border-b-2 border-b-slate-600 text-white text-base resize-none outline-none md:text-1xl col-span-2"
+            />
+            <input
+              className="text-white w-[50%] md:text-2xl md:w-full h-[35px] md:h- bg-slate-600 rounded-lg row-start-3 col-start-2 justify-center"
+              type="submit"
+            />
+          </div>
         </form>
       </div>
     </div>
