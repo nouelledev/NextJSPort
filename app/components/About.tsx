@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about">
+    <div id="about" className="max-w-[1400px] mx-auto">
       {/* Introduction section */}
       <div className="flex flex-row items-center pt-[70px] mx-auto px-4 justify-between md:justify-evenly  ">
         <div className="flex flex-col  h-fit w-fit ">
@@ -36,14 +36,14 @@ const About = () => {
             className="rounded-lg  object-cover"
           />
         </div>
-        <div className="flex flex-col  h-fit w-fit  md:justify-evenly ">
+        <div className="flex flex-col  h-fit w-[fit]  md:justify-evenly ">
           <div className="text-white items-center ">
-            <div className=" md:mx-auto md:w-[50%] md:p-auto md:pb-[50px] place-content-center mx-auto w-[50%] md:p-auto pb-[25px]">
+            <div className=" md:mx-auto md:w-[70%] md:p-auto md:pb-[50px] place-content-center mx-auto w-[50%] md:p-auto pb-[25px]">
               <h1 className="font-bold text-base md:text-5xl text-center">
                 About me
               </h1>
             </div>
-            <p className=" text-sm md:text-base font-semibold md:mx-auto md:w-[50%] md:p-auto px-4">
+            <p className=" text-sm md:text-base font-semibold md:mx-auto md:w-[70%] md:p-auto px-4">
               I am Nouelle Caparas, a Front End Web Developer. I am a graduate
               of Bachelor Of Science in Information Technology at STI College
               Malolos and is currently looking for opportunity in the Web

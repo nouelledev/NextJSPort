@@ -36,8 +36,8 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="w-full">
-      <div className="text-white flex justify-between items-center h-24 max-w-screen mx-auto px-4">
+    <div className="w-full  sticky top-0 bg-card-contact">
+      <div className="text-white flex justify-between items-center h-fit max-w-screen mx-auto px-4 ">
         <h1 className="w-full text-2xl font-semibold"> Nouelle Caparas</h1>
         <ul className=" hidden md:flex">
           {headerList.map((item) => (
