@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { HiXMark, HiBars3 } from "react-icons/hi2";
+import { Link } from "react-scroll";
 const headerList = [
   {
     id: 1,
@@ -40,9 +41,16 @@ const Navbar = () => {
         <h1 className="w-full text-2xl font-semibold"> Nouelle Caparas</h1>
         <ul className=" hidden md:flex">
           {headerList.map((item) => (
-            <li key={item.id} className="p-4">
-              {" "}
-              {item.title}
+            <li key={item.id} className="p-4 cursor-pointer">
+              <Link
+                to={item.link}
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                {item.title}
+              </Link>
             </li>
           ))}
         </ul>
@@ -64,7 +72,15 @@ const Navbar = () => {
             {headerList.map((item) => (
               <li key={item.id} className="p-4 border-b border-gray-600">
                 {" "}
-                {item.title}
+                <Link
+                  to={item.link}
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                >
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ul>

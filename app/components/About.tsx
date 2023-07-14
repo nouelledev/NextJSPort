@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div>
+    <div id="about">
       {/* Introduction section */}
       <div className="flex flex-row items-center pt-[70px] mx-auto px-4 justify-between md:justify-evenly  ">
         <div className="flex flex-col  h-fit w-fit ">

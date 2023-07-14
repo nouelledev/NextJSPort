@@ -50,11 +50,8 @@ const Portfolio = () => {
     setCurrentIndex(slideIndex);
   };
   return (
-    <>
-      <h1
-        id="portfolio"
-        className="text-white  mt-[20] text-center pt-[40%] md:pt-[20%] font-bold text-base md:text-5xl"
-      >
+    <div id="portfolio">
+      <h1 className="text-white  mt-[20] text-center pt-[30%] md:pt-[10%] font-bold text-base md:text-5xl">
         My Portfolio
       </h1>
       <div className="max-w-[1200px]  h-[550px] md:h-[780px] w-full m-auto py-16 px-4 relative group ">
@@ -89,7 +86,7 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

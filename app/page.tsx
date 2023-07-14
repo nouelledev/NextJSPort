@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";

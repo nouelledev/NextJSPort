@@ -10,13 +10,10 @@ import {
   AiOutlineFacebook,
   AiOutlineLinkedin,
 } from "react-icons/ai";
-import { Resend } from "resend";
-import ContactEmail from "../email/ContactEmail";
 
 const Contact = () => {
   const {
     register,
-    handleSubmit,
     watch,
     formState: { errors },
   } = useForm({
@@ -26,9 +23,19 @@ const Contact = () => {
       message: "",
     },
   });
-
+  async function handleSubmit(e: React.SyntheticEvent) {
+    await fetch("/api/email", {
+      method: "POST",
+      body: JSON.stringify({
+        firstName: "Nouelle",
+      }),
+    });
+  }
   return (
-    <div className="w-full h-full text-center grid grid-cols-1 px-11 pt-16 md:grid-cols-2">
+    <div
+      className="w-full h-full text-center grid grid-cols-1 px-11 pt-16 md:grid-cols-2"
+      id="contact"
+    >
       <h1 className="text-base md:text-5xl text-white pb-5 md:col-span-2 md:pb-[5%]">
         Contact me
       </h1>
@@ -56,12 +63,7 @@ const Contact = () => {
         </div>
       </div>
       <div className=" mt-[5%] md:w-[75%] md:mx-auto">
-        <form
-          className=" md:col-start-2 "
-          onSubmit={handleSubmit((data) => {
-            console.log(data);
-          })}
-        >
+        <form className=" md:col-start-2 " onSubmit={handleSubmit}>
           <input
             type="text"
             {...register("firstName")}
