@@ -50,7 +50,7 @@ const Portfolio = () => {
     setCurrentIndex(slideIndex);
   };
   return (
-    <div id="portfolio" className="max-w-[1400px] mx-auto">
+    <div id="portfolio" className="max-w-[1100px] mx-auto ">
       <h1 className="text-white  mt-[20] text-center pt-[30%] md:pt-[10%] font-bold text-base md:text-5xl">
         My Portfolio
       </h1>

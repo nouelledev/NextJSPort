@@ -11,6 +11,7 @@ module.exports = {
         "page-bg": "#23263A",
         "card-bd": "#2D3151",
         "card-contact": "#363B5A",
+        "nav-color": "#23263A",
       },
       borderRadius: {
         "my-size": "2.5rem",

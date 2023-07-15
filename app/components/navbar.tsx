@@ -36,7 +36,7 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="w-full  sticky top-0 bg-card-contact">
+    <div className="w-full  sticky top-0 z-50 bg-nav-color">
       <div className="text-white flex justify-between items-center h-fit max-w-screen mx-auto px-4 ">
         <h1 className="w-full text-2xl font-semibold"> Nouelle Caparas</h1>
         <ul className=" hidden md:flex">
@@ -60,7 +60,7 @@ const Navbar = () => {
         <div
           className={
             !nav
-              ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-page-bg ease-in-out duration-500"
+              ? "fixed left-0 top-0 w-[60%] h-fit border-r border-r-gray-900 bg-page-bg ease-in-out duration-500 "
               : "fixed left-[-100%] block md:hidden"
           }
         >
@@ -68,7 +68,7 @@ const Navbar = () => {
             {" "}
             Nouelle Caparas
           </h1>
-          <ul className="pt-12 uppercase p-4">
+          <ul className="pt-12 uppercase p-4 ">
             {headerList.map((item) => (
               <li key={item.id} className="p-4 border-b border-gray-600">
                 {" "}
