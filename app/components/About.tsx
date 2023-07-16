@@ -29,7 +29,7 @@ const About = () => {
         </div>
         {/* About me section*/}
         <div className="flex  flex-col md:flex-row items-center pt-[150px] mx-auto justify-between md:justify-evenly ">
-          <div className="w-fit h-fit shrink-0 md:ml-[20%] px-4">
+          <div className="w-fit h-fit shrink-0 md:ml-[15%] px-4">
             <Image
               src="/pcpicture.jpg"
               width={400}
