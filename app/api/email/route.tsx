@@ -1,6 +1,7 @@
 import ContactEmail from "@/app/email/ContactEmail";
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+
 const resend = new Resend(process.env.EMAIL_KEY);
 
 export async function POST(request: Request) {
