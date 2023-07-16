@@ -3,7 +3,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Nav";
 export default function Home() {
   return (
     <div className=" bg-page-bg h-full">
