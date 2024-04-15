@@ -4,20 +4,19 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import React from "react";
 import Reveal from "./Reveal";
-import Link from "next/link";
 
 const Portfolio = () => {
   const PortfolioProjects = [
     {
       imgUrl: "https://i.imgur.com/8dIO2mM.png",
       info: "Silidan Fulfillment Services Website",
-      link: "silidan-website.vercel.app/home",
+      link: "https://silidan-website.vercel.app/home",
       linkGit: "https://github.com/nouelledev/SilidanWebsite",
     },
     {
       imgUrl: "https://i.imgur.com/ouwOe3w.png",
       info: "Movie Title Viewer Application",
-      link: "nouelleflix.vercel.app/",
+      link: "https://nouelleflix.vercel.app/",
       linkGit: "https://github.com/nouelledev/Movieapp",
     },
   ];
@@ -53,15 +52,16 @@ const Portfolio = () => {
             <h1 className="text-white absolute inset-x-0 bottom-[-16] h-16 text-center font-bold text-4xl md:text-5xl">
               {PortfolioProjects[currentIndex].info}
             </h1>
-            <Link
-              href={PortfolioProjects[currentIndex].link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="text-white absolute inset-x-0 bottom-20 h-fit text-center font-bold text-xl md:text-5xl bg-page-bg w-fit rounded-lg mx-auto p-1">
+
+            <button className="text-white absolute inset-x-0 bottom-20 h-fit text-center font-bold text-xl md:text-5xl bg-page-bg w-fit rounded-lg mx-auto p-1">
+              <a
+                href={PortfolioProjects[currentIndex].link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Preview
-              </button>
-            </Link>
+              </a>
+            </button>
           </div>
           {/*Left arrow*/}
           <div className="text-white w-fit group-hover:block  absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20  cursor-pointer">
