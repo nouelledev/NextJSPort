@@ -4,34 +4,21 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import React from "react";
 import Reveal from "./Reveal";
+import Link from "next/link";
 
 const Portfolio = () => {
   const PortfolioProjects = [
     {
-      imgUrl:
-        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80",
-      info: "My first",
+      imgUrl: "https://i.imgur.com/8dIO2mM.png",
+      info: "Silidan Fulfillment Services Website",
+      link: "silidan-website.vercel.app/home",
+      linkGit: "https://github.com/nouelledev/SilidanWebsite",
     },
     {
-      imgUrl:
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
-      info: "My second",
-    },
-    {
-      imgUrl:
-        "https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80",
-      info: "My third",
-    },
-
-    {
-      imgUrl:
-        "https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80",
-      info: "My fourth",
-    },
-    {
-      imgUrl:
-        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80",
-      info: "My fifth",
+      imgUrl: "https://i.imgur.com/ouwOe3w.png",
+      info: "Movie Title Viewer Application",
+      link: "nouelleflix.vercel.app/",
+      linkGit: "https://github.com/nouelledev/Movieapp",
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -63,10 +50,18 @@ const Portfolio = () => {
             }}
             className="w-full h-full rounded-2xl bg-center bg-cover duration-500 "
           >
-            <h1 className="text-white absolute inset-x-0 bottom-20 h-16 text-center font-bold text-4xl md:text-5xl">
-              {" "}
+            <h1 className="text-white absolute inset-x-0 bottom-[-16] h-16 text-center font-bold text-4xl md:text-5xl">
               {PortfolioProjects[currentIndex].info}
             </h1>
+            <Link
+              href={PortfolioProjects[currentIndex].link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="text-white absolute inset-x-0 bottom-20 h-fit text-center font-bold text-xl md:text-5xl bg-page-bg w-fit rounded-lg mx-auto p-1">
+                Preview
+              </button>
+            </Link>
           </div>
           {/*Left arrow*/}
           <div className="text-white w-fit group-hover:block  absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20  cursor-pointer">
